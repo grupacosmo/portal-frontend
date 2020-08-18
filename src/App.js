@@ -1,10 +1,9 @@
 import React from 'react';
-import { Button } from 'antd';
 import './App.css';
 
 const App = () => (
   <div className="App">
-  <Button type="primary">Button</Button>
+    <h1>Landing Page</h1>
   </div>
 );
 
