@@ -2,6 +2,8 @@ import React from 'react';
 import './style.css';
 import { Layout, Menu} from 'antd';
 import TestComponent from "../../components/TestComponent";
+import TeamTitle from "../../components/TeamTitle";
+
 
 const { Header, Content, Footer } = Layout;
 
@@ -19,12 +21,11 @@ const Team = () => {
 
       <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
         <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
-          <h1>Team</h1>
-          <TestComponent/>
+            <TeamTitle title="WEBDEV" />
+            {/*<TestComponent/>*/}
 
-          {/*
-            Your code here
-          */}
+
+
         </div>
       </Content>
 
