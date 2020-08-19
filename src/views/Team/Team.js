@@ -5,7 +5,7 @@ import TestComponent from "../../components/TestComponent";
 
 const { Header, Content, Footer } = Layout;
 
-const MyProfile = () => {
+const Team = () => {
   return (
     <Layout>
       <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
@@ -33,4 +33,4 @@ const MyProfile = () => {
   )
 };
 
-export default MyProfile;
+export default Team;

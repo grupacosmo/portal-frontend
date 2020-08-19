@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
+import Team from "./views/Team/Team"
 
 const App = () => (
   <div className="App">
-    <h1>Landing Page</h1>
+    <Team />
   </div>
 );
 
