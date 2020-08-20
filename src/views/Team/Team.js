@@ -1,11 +1,14 @@
 import React from 'react';
 import './style.css';
 import { Layout, Menu} from 'antd';
-import TestComponent from "../../components/TestComponent";
+import { Tabs } from 'antd';
 import TeamTitle from "../../components/TeamTitle";
+import MembersList from "../../components/MembersList";
 
 
 const { Header, Content, Footer } = Layout;
+const { TabPane } = Tabs;
+
 
 const Team = () => {
   return (
@@ -22,8 +25,18 @@ const Team = () => {
       <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
         <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
             <TeamTitle title="WEBDEV" />
-            {/*<TestComponent/>*/}
 
+            <Tabs defaultActiveKey="1">
+                <TabPane tab="Aktualności" key="1">
+                    Content of Tab Pane 1
+                </TabPane>
+                <TabPane tab="Członkowie" key="2">
+                    <MembersList />
+                </TabPane>
+                <TabPane tab="Materiały" key="3">
+                    Content of Tab Pane 3
+                </TabPane>
+            </Tabs>
 
 
         </div>
