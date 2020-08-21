@@ -1,17 +1,9 @@
-import React,{useState} from "react";
-import {Avatar} from 'antd';
-import { Popover, Button } from 'antd';
+import React, {useState} from "react";
+import {Avatar, Popover, Button} from 'antd';
 import {UserOutlined} from '@ant-design/icons';
 import {CrownOutlined} from '@ant-design/icons';
 import {IdcardOutlined} from '@ant-design/icons';
 
-const buttonStyle={
-    height:"70%",
-    width: 100,
-    position:"absolute",
-    right:0,
-    top:"15%",
-}
 
 const popoverContent = (
     <div>
@@ -22,24 +14,23 @@ const popoverContent = (
 )
 
 
-
 function Member(props) {
-    const [visible,setVisible] = useState(false)
+    const [visible, setVisible] = useState(false)
 
     function handleVisibleChange(visible) {
         setVisible(visible);
     };
 
     const icon =
-        props.role === "Admin" ? <CrownOutlined /> :
-            props.role === "Kordynator" ? <IdcardOutlined /> : ""
+        props.role === "Admin" ? <CrownOutlined/> :
+            props.role === "Koordynator" ? <IdcardOutlined/> : ""
 
     return (
-        <div style={{position:"relative"}}>
+        <div style={{position: "relative", marginBottom: 40}}>
             <Avatar size={64} icon={<UserOutlined/>}/>
             <div className="MemberInfo">
                 <p className="MemberName">{props.name}</p>
-                <p className="MemberRole">{icon}  {props.role}</p>
+                <p className="MemberRole">{icon} {props.role}</p>
             </div>
 
             <Popover
@@ -50,7 +41,7 @@ function Member(props) {
                 onVisibleChange={handleVisibleChange}
                 placement="right"
             >
-                <Button type="primary" style={buttonStyle}>Kontakt</Button>
+                <Button type="primary" className="MemberButton">Kontakt</Button>
             </Popover>
 
         </div>
