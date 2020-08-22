@@ -1,11 +1,16 @@
 import React from 'react';
 import './style.css';
 import { Layout, Menu} from 'antd';
-import TestComponent from "../../components/TestComponent";
+import { Tabs } from 'antd';
+import TeamTitle from "../../components/TeamTitle";
+import MembersList from "../../components/MembersList";
+
 
 const { Header, Content, Footer } = Layout;
+const { TabPane } = Tabs;
 
-const MyProfile = () => {
+
+const Team = () => {
   return (
     <Layout>
       <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
@@ -19,12 +24,21 @@ const MyProfile = () => {
 
       <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
         <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
-          <h1>Team</h1>
-          <TestComponent/>
+            <TeamTitle title="WEBDEV" />
 
-          {/*
-            Your code here
-          */}
+            <Tabs defaultActiveKey="1">
+                <TabPane tab="Aktualności" key="1">
+                    Content of Tab Pane 1
+                </TabPane>
+                <TabPane tab="Członkowie" key="2">
+                    <MembersList />
+                </TabPane>
+                <TabPane tab="Materiały" key="3">
+                    Content of Tab Pane 3
+                </TabPane>
+            </Tabs>
+
+
         </div>
       </Content>
 
@@ -33,4 +47,4 @@ const MyProfile = () => {
   )
 };
 
-export default MyProfile;
+export default Team;
