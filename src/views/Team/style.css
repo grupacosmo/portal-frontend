@@ -11,10 +11,11 @@
 }
 
 .team-Title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-style: italic;
     font-weight: 600;
     letter-spacing: 8px;
+    text-transform: uppercase;
     background: -webkit-radial-gradient(circle, rgba(41, 16, 121, 1) 0%, rgba(2, 0, 36, 1) 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -59,7 +60,26 @@
     top: 15%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
+    .team-Title{
+        font-size: 1.5em;
+    }
+
+    .MemberCategory {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    .MemberButton {
+        width: 75px;
+    }
+}
+
+@media (min-width: 576px ) and (max-width: 767px) {
+    .team-Title{
+        font-size: 2em;
+    }
+
     .MemberCategory {
         margin-left: auto;
         margin-right: auto;
@@ -71,6 +91,10 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    .team-Title{
+        font-size: 2em;
+    }
+
     .MemberCategory {
         margin-left: auto;
         margin-right: auto;
