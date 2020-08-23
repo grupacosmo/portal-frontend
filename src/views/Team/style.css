@@ -53,11 +53,21 @@
 }
 
 .MemberButton {
-    height: 70%;
+    height: 60%;
     width: 100%;
+    font-size: 17px;
     position: absolute;
     right: 0;
-    top: 15%;
+    top: 20%;
+}
+
+.TabBarPane{
+    font-size: 18px;
+}
+
+.TabBarButton{
+    font-size: 18px;
+    height: 80%;
 }
 
 @media (max-width: 575px) {
@@ -74,6 +84,15 @@
     .MemberButton {
         height: 50%;
         top: 25%;
+        font-size: 14px;
+    }
+
+    .TabBarPane{
+        font-size: 14px;
+    }
+
+    .TabBarButton{
+        font-size: 14px;
     }
 }
 
@@ -87,6 +106,15 @@
         margin-right: auto;
         width: 100%;
     }
+
+    .TabBarPane{
+        font-size: 14px;
+    }
+
+    .TabBarButton{
+        font-size: 14px;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

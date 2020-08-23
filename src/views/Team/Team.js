@@ -1,13 +1,21 @@
 import React from 'react';
 import './style.css';
 import {Layout, Menu} from 'antd';
-import {Tabs} from 'antd';
+import {Tabs, Button} from 'antd';
+import {SnippetsOutlined,TeamOutlined,FileTextOutlined,LinkOutlined} from '@ant-design/icons';
 import MembersList from "../../components/MembersList";
 
 
 const {Header, Content, Footer} = Layout;
 const {TabPane} = Tabs;
 
+const tabBarContent = [
+    <span className="TabBarPane"><SnippetsOutlined />Aktualności</span>,
+    <span className="TabBarPane"><TeamOutlined />Członkowie</span>,
+    <span className="TabBarPane"><FileTextOutlined />Lista Projektów</span>
+]
+
+const con = <Button icon={<LinkOutlined />} className="TabBarButton" > Materiały </Button>
 
 const Team = () => {
     return (
@@ -28,14 +36,14 @@ const Team = () => {
                         <h1 style={{fontWeight: "bold"}}>Webdev</h1>
                     </div>
 
-                    <Tabs defaultActiveKey="1" >
-                        <TabPane tab="Aktualności" key="1">
+                    <Tabs defaultActiveKey="1" tabBarExtraContent={con}>
+                        <TabPane tab={tabBarContent[0]} key="1">
                             Content of Tab Pane 1
                         </TabPane>
-                        <TabPane tab="Członkowie" key="2">
+                        <TabPane tab={tabBarContent[1]} key="2">
                             <MembersList/>
                         </TabPane>
-                        <TabPane tab="Materiały" key="3">
+                        <TabPane tab={tabBarContent[2]} key="3">
                             Content of Tab Pane 3
                         </TabPane>
                     </Tabs>

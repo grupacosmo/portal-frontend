@@ -1,9 +1,6 @@
 import React, {useState} from "react";
 import {Avatar, Popover, Button, Row, Col} from 'antd';
-import {UserOutlined} from '@ant-design/icons';
-import {CrownOutlined} from '@ant-design/icons';
-import {IdcardOutlined} from '@ant-design/icons';
-
+import {UserOutlined,CrownOutlined,IdcardOutlined} from '@ant-design/icons';
 
 const popoverContent = (
     <div>
