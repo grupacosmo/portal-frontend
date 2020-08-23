@@ -7,6 +7,7 @@ const MemberButton = (props) =>{
     useEffect(() => {
         if(props.props.displayNum === props.props.data.length)
         setDisplay("none")
+
     },[])
 
     function handleClick(){

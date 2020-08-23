@@ -28,7 +28,7 @@ const Team = () => {
                         <h1 style={{fontWeight: "bold"}}>Webdev</h1>
                     </div>
 
-                    <Tabs defaultActiveKey="1">
+                    <Tabs defaultActiveKey="1" >
                         <TabPane tab="Aktualności" key="1">
                             Content of Tab Pane 1
                         </TabPane>

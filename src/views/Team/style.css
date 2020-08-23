@@ -54,14 +54,14 @@
 
 .MemberButton {
     height: 70%;
-    width: 100px;
+    width: 100%;
     position: absolute;
     right: 0;
     top: 15%;
 }
 
 @media (max-width: 575px) {
-    .team-Title{
+    .team-Title {
         font-size: 1.5em;
     }
 
@@ -70,13 +70,15 @@
         margin-right: auto;
         width: 100%;
     }
+
     .MemberButton {
-        width: 75px;
+        height: 50%;
+        top: 25%;
     }
 }
 
 @media (min-width: 576px ) and (max-width: 767px) {
-    .team-Title{
+    .team-Title {
         font-size: 2em;
     }
 
@@ -85,13 +87,10 @@
         margin-right: auto;
         width: 100%;
     }
-    .MemberButton {
-        width: 75px;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .team-Title{
+    .team-Title {
         font-size: 2em;
     }
 

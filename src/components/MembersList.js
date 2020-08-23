@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Member from "./Member";
 import MemberButton from "./MemberButton";
-import {Card, Button} from 'antd';
+import {Card} from 'antd';
 
 const hStyle = {
     borderBottom: 3,
@@ -11,7 +11,9 @@ const hStyle = {
     fontWeight: 600,
 }
 const bStyle = {
-    textAlign: "left"
+    textAlign: "left",
+    padding: 10,
+    marginTop: 30
 }
 
 const membersData = [
