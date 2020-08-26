@@ -25,14 +25,14 @@ function Member(props) {
     return (
         <div style={{marginBottom: 40}}>
             <Row>
-                <Col xs={16}>
+                <Col xs={24} md={16}>
                     <Avatar size={64} icon={<UserOutlined/>}/>
                     <div className="MemberInfo">
                         <p className="MemberName">{props.name}</p>
                         <p className="MemberRole">{icon} {props.role}</p>
                     </div>
                 </Col>
-                <Col xs={{span: 6, offset: 2}}>
+                <Col xs={24} md={8}>
                     <Popover
                         content={popoverContent}
                         title="Kontakt"

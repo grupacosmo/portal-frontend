@@ -28,15 +28,8 @@
     border: 0px solid #000000;
 }
 
-.MemberCategory {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-
 .MemberInfo {
     display: inline-block;
-    height: 64px;
     vertical-align: middle;
     margin-left: 20px;
     padding: 5px;
@@ -44,7 +37,6 @@
 
 .MemberInfo > p {
     margin-bottom: 0;
-    height: 50%;
 }
 
 .MemberName {
@@ -53,12 +45,10 @@
 }
 
 .MemberButton {
-    height: 60%;
+    min-height: 40px;
+    height: 100%;
     width: 100%;
     font-size: 17px;
-    position: absolute;
-    right: 0;
-    top: 20%;
 }
 
 .TabBarPane{
@@ -70,7 +60,7 @@
     height: 80%;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
     .team-Title {
         font-size: 1.5em;
     }
@@ -82,8 +72,7 @@
     }
 
     .MemberButton {
-        height: 50%;
-        top: 25%;
+        margin-top: 10px;
         font-size: 14px;
     }
 
