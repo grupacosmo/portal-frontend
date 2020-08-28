@@ -1,21 +1,25 @@
 import React from 'react';
 import './style.css';
-import {Layout, Menu} from 'antd';
-import {Tabs, Button} from 'antd';
-import {SnippetsOutlined,TeamOutlined,FileTextOutlined,LinkOutlined} from '@ant-design/icons';
+import {Tabs, Button, Layout,Space, Menu, Row, Col} from 'antd';
+import {SnippetsOutlined, TeamOutlined, FileTextOutlined, LinkOutlined} from '@ant-design/icons';
 import MembersList from "../../components/MembersList";
+import "./fontello-trello/css/fontello.css"
 
 
 const {Header, Content, Footer} = Layout;
 const {TabPane} = Tabs;
 
 const tabBarContent = [
-    <span className="TabBarPane"><SnippetsOutlined />Aktualności</span>,
-    <span className="TabBarPane"><TeamOutlined />Członkowie</span>,
-    <span className="TabBarPane"><FileTextOutlined />Lista Projektów</span>
+    <span className="TabBarPane"><SnippetsOutlined/>Aktualności</span>,
+    <span className="TabBarPane"><TeamOutlined/>Członkowie</span>,
+    <span className="TabBarPane"><FileTextOutlined/>Lista Projektów</span>
 ]
 
-const con = <Button icon={<LinkOutlined />} className="TabBarButton" > Materiały </Button>
+const con =
+    <Space>
+        <Button icon={<LinkOutlined/>} className="TabBarButton"> Materiały </Button>
+        <Button icon={<i className="icon-trello"/>} className="TabBarButton"> Trello </Button>
+    </Space>
 
 const Team = () => {
     return (

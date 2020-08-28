@@ -57,7 +57,8 @@
 
 .TabBarButton{
     font-size: 18px;
-    height: 80%;
+    height: auto;
+    width: 150px;
 }
 
 @media (max-width: 768px) {
@@ -81,7 +82,8 @@
     }
 
     .TabBarButton{
-        font-size: 14px;
+        font-size: 12px;
+        width: 100px;
     }
 }
 
@@ -102,6 +104,7 @@
 
     .TabBarButton{
         font-size: 14px;
+        width: 120px;
     }
 
 }
