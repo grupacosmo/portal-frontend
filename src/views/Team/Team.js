@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
-import {Tabs, Button, Layout,Space, Menu, Row, Col} from 'antd';
-import {SnippetsOutlined, TeamOutlined, FileTextOutlined, LinkOutlined} from '@ant-design/icons';
+import {Tabs, Button, Layout, Space, Dropdown, Menu} from 'antd';
+import {SnippetsOutlined, TeamOutlined, FileTextOutlined, LinkOutlined, MenuOutlined} from '@ant-design/icons';
 import MembersList from "../../components/MembersList";
 import "./fontello-trello/css/fontello.css"
 
@@ -15,11 +15,31 @@ const tabBarContent = [
     <span className="TabBarPane"><FileTextOutlined/>Lista Projektów</span>
 ]
 
-const con =
+const menu = (
+    <Menu>
+        <Menu.Item key="1" icon={<LinkOutlined style={{fontSize: 16}}/>} style={{fontSize: 16}} >
+            Materiały
+        </Menu.Item>
+        <Menu.Divider />
+        <Menu.Item key="2" icon={<i className="icon-trello" style={{fontSize: 16}}/>}  style={{fontSize: 16}}>
+            Trello
+        </Menu.Item>
+    </Menu>
+);
+
+function handleButtonClick(e) {
+    //e.target.innerHTML = "Ala"
+}
+
+const content =(
     <Space>
         <Button icon={<LinkOutlined/>} className="TabBarButton"> Materiały </Button>
         <Button icon={<i className="icon-trello"/>} className="TabBarButton"> Trello </Button>
+        <Dropdown overlay={menu} trigger={"click"} placement="bottomRight">
+            <Button icon={<MenuOutlined />} className="DropDownButton" onClick={handleButtonClick}></Button>
+        </Dropdown>
     </Space>
+);
 
 const Team = () => {
     return (
@@ -40,7 +60,7 @@ const Team = () => {
                         <h1 style={{fontWeight: "bold"}}>Webdev</h1>
                     </div>
 
-                    <Tabs defaultActiveKey="1" tabBarExtraContent={con}>
+                    <Tabs defaultActiveKey="1" tabBarExtraContent={content}>
                         <TabPane tab={tabBarContent[0]} key="1">
                             Content of Tab Pane 1
                         </TabPane>

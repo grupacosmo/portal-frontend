@@ -58,7 +58,14 @@
 .TabBarButton{
     font-size: 18px;
     height: auto;
-    width: 150px;
+    width: 140px;
+}
+
+.DropDownButton{
+    font-size: 18px;
+    height: auto;
+    width: 60px;
+    display: none;
 }
 
 @media (max-width: 768px) {
@@ -82,8 +89,11 @@
     }
 
     .TabBarButton{
-        font-size: 12px;
-        width: 100px;
+        display: none;
+    }
+
+    .DropDownButton{
+        display: inline;
     }
 }
 
@@ -103,8 +113,11 @@
     }
 
     .TabBarButton{
-        font-size: 14px;
-        width: 120px;
+        display: none;
+    }
+
+    .DropDownButton{
+        display: inline;
     }
 
 }
@@ -118,5 +131,13 @@
         margin-left: auto;
         margin-right: auto;
         width: 75%;
+    }
+
+    .TabBarButton{
+        display: none;
+    }
+
+    .DropDownButton{
+        display: inline;
     }
 }
