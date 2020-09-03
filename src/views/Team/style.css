@@ -14,6 +14,7 @@
     font-size: 2.2rem;
     font-style: italic;
     font-weight: 600;
+    text-align: center;
     letter-spacing: 8px;
     text-transform: uppercase;
     background: -webkit-radial-gradient(circle, rgba(41, 16, 121, 1) 0%, rgba(2, 0, 36, 1) 70%);
@@ -66,6 +67,12 @@
     height: auto;
     width: 60px;
     display: none;
+}
+
+.MemberCategory {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
 }
 
 @media (max-width: 768px) {

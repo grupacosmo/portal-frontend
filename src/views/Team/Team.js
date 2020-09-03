@@ -27,16 +27,13 @@ const menu = (
     </Menu>
 );
 
-function handleButtonClick(e) {
-    //e.target.innerHTML = "Ala"
-}
 
 const content =(
     <Space>
         <Button icon={<LinkOutlined/>} className="TabBarButton"> Materiały </Button>
         <Button icon={<i className="icon-trello"/>} className="TabBarButton"> Trello </Button>
         <Dropdown overlay={menu} trigger={"click"} placement="bottomRight">
-            <Button icon={<MenuOutlined />} className="DropDownButton" onClick={handleButtonClick}></Button>
+            <Button icon={<MenuOutlined />} className="DropDownButton"></Button>
         </Dropdown>
     </Space>
 );

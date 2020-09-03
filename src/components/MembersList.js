@@ -96,8 +96,7 @@ const MemberList = () => {
 
 
     return (
-        <div className="site-card-wrapper">
-
+        <div>
             <Card title="Administratorzy" bordered={false} headStyle={hStyle} bodyStyle={bStyle}
                   className="MemberCategory">
                 {admins.slice(0, adminsNum)}
@@ -116,7 +115,6 @@ const MemberList = () => {
                 {members.slice(0, membersNum)}
                 <MemberButton props={{data: members, displayNum: membersNum, setFunction: setMembersNum}}/>
             </Card>
-
         </div>
     )
 }
