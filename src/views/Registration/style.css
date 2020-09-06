@@ -1,19 +1,19 @@
 body {
-    background-image: url("../hexellence/hexellence.png"); /* Background pattern from Toptal Subtle Patterns */
+    background-image: url("../../assets/img/hexellence.png"); /* Background pattern from Toptal Subtle Patterns */
 }
 
 .content {
     margin-right: auto;
     margin-left: auto;
     background-color: white;
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
     padding: 30px 50px 50px 50px;
     margin-top: 100px;
     -webkit-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
     -moz-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
     box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
 }
-
 
 .title {
     font-size: 1.4rem;
@@ -26,23 +26,10 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    border-radius: 59px 59px 59px 59px;
-    border: 0px solid #000000;
 }
 
-.login-form {
-    max-width: 500px;
-    margin-top: 30px;
-}
-
-.login-form-forgot {
-    float: right;
-}
-
-.ant-col-rtl {
-    float: left;
-}
-
-.login-form-button {
-    width: 100%;
+@media (max-width: 326px) {
+    .title {
+        font-size: 1rem !important;
+    }
 }

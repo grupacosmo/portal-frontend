@@ -7,8 +7,8 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import MyProfile from "./views/MyProfile/MyProfile";
 import Team from "./views/Team/Team";
-import Login from "./views/Login&Registration/Login/Login";
-import Registration from "./views/Login&Registration/Registration/Registration";
+import Login from "./views/Login/Login";
+import Registration from "./views/Registration/Registration";
 
 ReactDOM.render(
   <BrowserRouter>

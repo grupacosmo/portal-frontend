@@ -25,7 +25,7 @@ const Login = () => {
                         },
                     ]}
                 >
-                    <Input prefix={<UserOutlined className="site-form-item-icon"/>} placeholder="Username"/>
+                    <Input prefix={<UserOutlined/>} placeholder="Username" className="input-box"/>
                 </Form.Item>
                 <Form.Item
                     name="password"
@@ -35,11 +35,13 @@ const Login = () => {
                             message: 'Please input your Password!',
                         },
                     ]}
+                    style={{paddingTop: 12}}
                 >
                     <Input.Password
-                        prefix={<LockOutlined className="site-form-item-icon"/>}
+                        prefix={<LockOutlined/>}
                         type="password"
                         placeholder="Password"
+                        className="input-box"
                     />
                 </Form.Item>
                 <Form.Item>
