@@ -3,6 +3,7 @@ import "./style.css"
 import {Form, Input, Tooltip, Select, Button,} from 'antd';
 import {QuestionCircleOutlined} from '@ant-design/icons';
 
+const axios = require('axios');
 const {Option} = Select;
 const formItemLayout = {
     labelCol: {
@@ -35,6 +36,7 @@ const tailFormItemLayout = {
     },
 };
 
+
 const Registration = () => {
     const [form] = Form.useForm();
 
@@ -50,6 +52,30 @@ const Registration = () => {
             </Select>
         </Form.Item>
     );
+
+    const handleClick = () =>{
+        const data = {
+            username: form.getFieldValue("nickname"),
+            password: form.getFieldValue("password"),
+            repeatedPassword: form.getFieldValue("confirm"),
+            email: form.getFieldValue("email")
+        }
+
+        console.log(data)
+        axios.post('http://cosmo-portal.herokuapp.com/user',data)
+            .then(response => console.log(response))
+            .catch(error => console.log(error))
+
+        //Sposób z fetch
+        // fetch('http://cosmo-portal.herokuapp.com/user', {
+        //     method: 'POST', // or 'PUT'
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify(data)
+        // }).then(response => response.json())
+        //     .then(data => console.log(data));
+    }
 
     return (
         <div className="content">
@@ -141,26 +167,8 @@ const Registration = () => {
                     <Input/>
                 </Form.Item>
 
-                <Form.Item
-                    name="phone"
-                    label="Phone Number"
-                    rules={[
-                        {
-                            required: true,
-                            message: 'Please input your phone number!',
-                        },
-                    ]}
-                >
-                    <Input
-                        addonBefore={prefixSelector}
-                        style={{
-                            width: '100%',
-                        }}
-                    />
-                </Form.Item>
-
                 <Form.Item {...tailFormItemLayout}>
-                    <Button type="primary" htmlType="submit" style={{width: "100%"}}>
+                    <Button onClick={handleClick} type="primary" htmlType="submit" style={{width: "100%"}}>
                         Register
                     </Button>
                 </Form.Item>
